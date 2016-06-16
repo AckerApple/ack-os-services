@@ -1,5 +1,5 @@
 # ack-os-services
-Operating System install/start/stop types of services, wrapped the Acker way
+Operating system install/start/stop types of services for Mac & Windows, wrapped the Acker way
 
 ## Install
 ```
@@ -39,4 +39,17 @@ Written in ECMA6. Works with CommonJS
     throw e
   })
   .catch(e=>{throw e})
+```
+
+## HEADS UP
+#### Terminal/CMD commands often have to be run as a root user when performing install/uninstall because access to system services is required.
+
+## Test
+Again, sudo for Mac OR run-as-administrator for Windows, maybe required
+```
+$ npm test
+```
+- OR -
+```
+$ sudo npm test
 ```
