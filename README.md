@@ -8,7 +8,10 @@ $ npm install https://github.com/AckerApple/ack-node.git --save
 
 ## Example Usage
 ```
-  var script = require('path').join(__dirname,'application.js')//file to run on service start
+  //file to run on service start
+  var script = require('path').join(__dirname,'application.js')
+
+  //Object to govern service
   var osService = require('ack-os-services')('AAAAA',{
     description: 'Launches AAAAA server',
     script: script
