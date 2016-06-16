@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "ack-node": "https://github.com/AckerApple/ack-node.git"
+    "ack-node": "git://github.com/AckerApple/ack-node.git"
   },
   "devDependencies": {},
   "scripts": {
