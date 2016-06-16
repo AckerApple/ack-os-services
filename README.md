@@ -1,5 +1,5 @@
-# ack-win-services
-Windows install/start/stop services, wrapped the Acker way
+# ack-os-services
+Operating System install/start/stop types of services, wrapped the Acker way
 
 ## Install
 ```
