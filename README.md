@@ -7,7 +7,7 @@ $ npm install ack-os-services --save
 ```
 
 ## Example Usage
-Written in ECMA6. Works with CommonJS
+Examples written in ECMA6. Actual code is written in CommonJS
 ```
   //file to run on service start
   var script = require('path').join(__dirname,'application.js')
