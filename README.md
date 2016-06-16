@@ -3,7 +3,7 @@ Operating system install/start/stop types of services for Mac & Windows, wrapped
 
 ## Install
 ```
-$ npm install https://github.com/AckerApple/ack-os-services.git --save
+$ npm install ack-os-services --save
 ```
 
 ## Example Usage
