@@ -1,9 +1,9 @@
-module.exports = function(name, $scope){
-	return new OsService(name, $scope)
+module.exports = function(name, options){
+	return new OsService(name, options)
 }
 
 var domain = require('domain'),//we use a domain because node-mac and node-windows runs async attempts to root file system access which causes uncaught errors
-	ack = require('ack-node'),
+	ack = require('ack-node'),//promise & folder delete
 	path = require('path'),
 	osType = require('os').type()//node module
 
@@ -17,9 +17,12 @@ switch(osType){
 		break;
 }
 
-/**  */
-function OsService(name,$scope){
-	this.data = $scope || {}
+/**
+	@name - name of service to install/start/stop
+	@options - see npm node-man or node-windows
+*/
+function OsService(name,options){
+	this.data = options || {}
 	if(name)this.data.name = name
   this.data.cwd = this.data.cwd || __dirname//temp-fix because node-mac fails without
 	return this
@@ -90,6 +93,11 @@ OsService.prototype.asyncInstall = function(callback){
 	})
 }
 
+OsService.prototype.cleanupLogs = function(){
+	var dPath = path.join(this.data.script,'../','daemon')
+	return ack.path(dPath).delete()
+}
+
 OsService.prototype.asyncUninstall = function(callback){
 	var domain = createDomain()
 	var Service = this.getService()
@@ -98,8 +106,7 @@ OsService.prototype.asyncUninstall = function(callback){
 
 	Service.on('uninstall', function(){
 		if(this.data.script){
-			var dPath = path.join(this.data.script,'../','daemon')
-			ack.path(dPath).delete()
+			this.cleanupLogs()
 			.then(function(){
 				callback()
 			})
