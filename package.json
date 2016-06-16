@@ -1,0 +1,33 @@
+{
+  "name": "ack-os-services",
+  "version": "1.0.0",
+  "description": "Operating System install/start/stop types of services, wrapped the Acker way",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ack-node": "https://github.com/AckerApple/ack-node.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./test/index.js",
+    "postinstall": "node ./os_setup_param.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AckerApple/ack-os-services.git"
+  },
+  "keywords": [
+    "windows",
+    "mac",
+    "services",
+    "start/stop/restart"
+  ],
+  "author": "Acker Apple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AckerApple/ack-os-services/issues"
+  },
+  "homepage": "https://github.com/AckerApple/ack-os-services#readme"
+}
