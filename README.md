@@ -7,6 +7,7 @@ $ npm install https://github.com/AckerApple/ack-node.git --save
 ```
 
 ## Example Usage
+Written in ECMA6. Works with CommonJS
 ```
   //file to run on service start
   var script = require('path').join(__dirname,'application.js')
