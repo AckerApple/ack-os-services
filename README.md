@@ -1,5 +1,5 @@
 # ack-os-services
-Operating system install/start/stop types of services for Mac & Windows, wrapped the Acker way
+Operating system install/start/stop types of services for Mac and Windows, wrapped the Acker way
 
 ## Install
 ```
