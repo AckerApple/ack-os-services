@@ -1,7 +1,7 @@
 {
   "name": "ack-os-services",
-  "version": "1.0.2",
-  "description": "Operating system install/start/stop types of services for Mac & Windows, wrapped the Acker way",
+  "version": "1.0.3",
+  "description": "Operating system install/start/stop types of services for Mac and Windows, wrapped the Acker way",
   "main": "index.js",
   "directories": {
     "test": "node ./test/index.js"
