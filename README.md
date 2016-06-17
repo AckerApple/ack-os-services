@@ -1,6 +1,8 @@
 # ack-os-services
 Operating system install/start/stop types of services for Mac and Windows, wrapped the Acker way
 
+A wrapper of [node-mac](https://github.com/coreybutler/node-mac) and [node-windows](https://www.npmjs.com/package/node-windows), under one uniformed package. Only the applicable dependencies are installed during the postinstall npm phase.
+
 ## Install
 ```
 $ npm install ack-os-services --save
@@ -46,6 +48,17 @@ osService.install()
 .catch(e=>{throw e})
 ```
 
+### User Account Attributes
+```
+var osService = require('ack-os-services')('name',{script:__dirname})
+
+osService.Service.user.domain = 'mydomain.local';
+osService.Service.user.account = 'username';
+osService.Service.user.password = 'password';
+
+osService.Service.sudo.password = 'password';
+```
+
 ## HEADS UP
 #### Terminal/CMD commands often have to be run as a root user when performing install/uninstall because access to system services is required.
 
@@ -58,3 +71,7 @@ $ npm test
 ```
 $ sudo npm test
 ```
+
+
+### Future Plans
+- Add [node-linux](https://github.com/coreybutler/node-linux)
