@@ -1,5 +1,7 @@
 # ack-os-services
-Operating system install/start/stop types of services for Mac and Windows, wrapped the Acker way
+DEPRECATED: Operating system install/start/stop types of services for Mac and Windows, wrapped the Acker way
+
+! USE [pm2](https://www.npmjs.com/package/pm2) INSTEAD
 
 A wrapper of [node-mac](https://github.com/coreybutler/node-mac) and [node-windows](https://www.npmjs.com/package/node-windows), under one uniformed package. Only the applicable dependencies are installed during the postinstall npm phase.
 
